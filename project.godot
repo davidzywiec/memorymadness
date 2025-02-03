@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="MemoryMadness"
+run/main_scene="res://ImageFillerAsset/image_filler_node.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
+boot_splash/show_image=false
 boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=768
+window/stretch/mode="canvas_items"
 
 [rendering]
 
