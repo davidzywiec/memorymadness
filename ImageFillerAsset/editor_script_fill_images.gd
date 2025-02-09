@@ -1,14 +1,11 @@
 @tool
-extends Node
+extends EditorScript
 
 const PATH : String = "res://assets/glitch/"
 
-@export var filler_resource : ImageFillerAsset
+# Called when the script is executed (using File -> Run in Script Editor).
+func _run() -> void:
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	
 	var image_filler_asset = ImageFillerAsset.new()
 	
 	var dir = DirAccess.open(PATH)
@@ -16,4 +13,5 @@ func _ready() -> void:
 		if file.ends_with(".png"):
 			if not image_filler_asset.file_names.has(PATH + file):
 				image_filler_asset.file_names.append(PATH + file)
+				
 	ResourceSaver.save(image_filler_asset,"res://ImageFillerAsset/image_filler_resource.tres")
