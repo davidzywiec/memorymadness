@@ -1,17 +1,13 @@
 class_name LevelData
-extends Node
 
-@export
 var _level_number: int = 0:
 	set = set_level_number,
 	get = get_level_number
 	
-@export
 var _rows: int = 0:
 	set = set_rows,
 	get = get_rows
 	
-@export
 var _columns: int = 0:
 	set = set_columns,
 	get = get_columns

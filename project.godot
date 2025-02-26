@@ -17,6 +17,10 @@ boot_splash/show_image=false
 boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
 
+[autoload]
+
+ImageManager="*res://Singletons/ImageManager.gd"
+
 [display]
 
 window/size/viewport_width=1024
