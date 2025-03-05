@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MemoryMadness"
-run/main_scene="res://ImageFillerAsset/image_filler_node.tscn"
+run/main_scene="res://Level/master.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/show_image=false
 boot_splash/image="res://icon.png"
@@ -20,6 +20,7 @@ config/icon="res://icon.png"
 [autoload]
 
 ImageManager="*res://Singletons/ImageManager.gd"
+GameManager="*res://Singletons/GameManager.gd"
 
 [display]
 
