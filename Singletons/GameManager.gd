@@ -28,7 +28,8 @@ func get_selection_level(level: int) -> SelectedLevelData:
 		#Add image twice for the pair
 		for x in range(2):
 			image_array.append(ImageManager.get_item_image(img))
-	print(image_array)
+	#Shuffle the array again
+	image_array.shuffle()
 	#Return instance of Selected Level Data
 	return SelectedLevelData.new(
 		image_array,
