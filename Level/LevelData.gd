@@ -12,10 +12,10 @@ var _columns: int = 0:
 	set = set_columns,
 	get = get_columns
 
-func _init(level_number : int, rows: int, cols: int) -> void:
+func _init(level_number: int, rows: int, columns: int) -> void:
 	_level_number = level_number
 	_rows = rows
-	_columns = cols
+	_columns = columns
 
 #Getter and Setter Functions
 func set_level_number(value: int) -> void:
@@ -36,5 +36,6 @@ func set_columns(value: int) -> void:
 func get_columns() -> int:
 	return _columns
 
+#Support functions
 func get_target_pairs() -> int:
-	return int(_columns * _rows)
+	return int((_rows * _columns) / 2)
