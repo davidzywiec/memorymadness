@@ -4,7 +4,7 @@ extends Node
 var _level_data : Dictionary = {
 	1 : LevelData.new(1,2,2),
 	2 : LevelData.new(2,3,4),
-	3 : LevelData.new(3,3,4),
+	3 : LevelData.new(3,4,5),
 	4 : LevelData.new(4,4,6),
 	5 : LevelData.new(5,6,6),
 	6 : LevelData.new(6,6,7)

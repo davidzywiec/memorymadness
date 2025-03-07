@@ -1,0 +1,105 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4lgpfpssil0u"]
+
+[ext_resource type="LabelSettings" uid="uid://bb475bkqlpx44" path="res://assets/LG_84_Green.tres" id="1_chrpu"]
+[ext_resource type="PackedScene" uid="uid://ck5umqv12cqgx" path="res://FrontSprite/front_sprite.tscn" id="2_okhhb"]
+[ext_resource type="PackedScene" uid="uid://080i3sbpvs21" path="res://UI/level_button.tscn" id="2_pe2sq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8x6we"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.764286, 0.514838, 0.995619, 0.329412)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_8x6we")
+
+[node name="VBC" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer2" type="Control" parent="VBC"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBC"]
+layout_mode = 2
+text = "MEMORY MADNESS"
+label_settings = ExtResource("1_chrpu")
+horizontal_alignment = 1
+
+[node name="Spacer3" type="Control" parent="VBC"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBCLevels" type="HBoxContainer" parent="VBC"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="LevelButton" parent="VBC/HBCLevels" instance=ExtResource("2_pe2sq")]
+layout_mode = 2
+
+[node name="LevelButton2" parent="VBC/HBCLevels" instance=ExtResource("2_pe2sq")]
+layout_mode = 2
+level_num = 2
+
+[node name="LevelButton3" parent="VBC/HBCLevels" instance=ExtResource("2_pe2sq")]
+layout_mode = 2
+level_num = 3
+
+[node name="LevelButton4" parent="VBC/HBCLevels" instance=ExtResource("2_pe2sq")]
+layout_mode = 2
+level_num = 4
+
+[node name="LevelButton5" parent="VBC/HBCLevels" instance=ExtResource("2_pe2sq")]
+layout_mode = 2
+level_num = 5
+
+[node name="LevelButton6" parent="VBC/HBCLevels" instance=ExtResource("2_pe2sq")]
+layout_mode = 2
+level_num = 6
+
+[node name="Spacer4" type="Control" parent="VBC"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBCSprites" type="HBoxContainer" parent="VBC"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 42
+alignment = 1
+
+[node name="FrontSprite" parent="VBC/HBCSprites" instance=ExtResource("2_okhhb")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="VBC/HBCSprites" instance=ExtResource("2_okhhb")]
+layout_mode = 2
+
+[node name="FrontSprite3" parent="VBC/HBCSprites" instance=ExtResource("2_okhhb")]
+layout_mode = 2
+
+[node name="FrontSprite4" parent="VBC/HBCSprites" instance=ExtResource("2_okhhb")]
+layout_mode = 2
+
+[node name="FrontSprite5" parent="VBC/HBCSprites" instance=ExtResource("2_okhhb")]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VBC"]
+layout_mode = 2
+size_flags_vertical = 3
