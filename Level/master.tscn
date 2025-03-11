@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgyqorx2vode4"]
+[gd_scene load_steps=5 format=3 uid="uid://dgyqorx2vode4"]
 
 [ext_resource type="Script" path="res://Level/master.gd" id="1_bbx2c"]
 [ext_resource type="Texture2D" uid="uid://cpt4imwja6hb5" path="res://assets/images/backgroundEmpty.png" id="2_mjfr3"]
 [ext_resource type="PackedScene" uid="uid://d4lgpfpssil0u" path="res://UI/main.tscn" id="3_u0cnp"]
+[ext_resource type="PackedScene" uid="uid://dgluajg1bp7fs" path="res://UI/game.tscn" id="4_3wtfl"]
 
 [node name="Master" type="CanvasLayer"]
 script = ExtResource("1_bbx2c")
@@ -17,3 +18,6 @@ texture = ExtResource("2_mjfr3")
 expand_mode = 2
 
 [node name="Main" parent="." instance=ExtResource("3_u0cnp")]
+
+[node name="Game" parent="." instance=ExtResource("4_3wtfl")]
+visible = false

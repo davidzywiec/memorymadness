@@ -11,8 +11,8 @@ func _ready() -> void:
 		ld._rows,
 		ld._columns
 	]
+	self.pressed.connect(select_level_pressed)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func select_level_pressed() -> void:
+	SignalManager.on_level_select.emit(level_num)

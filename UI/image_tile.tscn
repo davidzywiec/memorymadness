@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://fh3og1ir4aoc"]
+
+[ext_resource type="Texture2D" uid="uid://dquceubf2vaqj" path="res://assets/frames/hidden_frame_blank.png" id="1_6qahc"]
+[ext_resource type="Texture2D" uid="uid://wguvtje4s4aa" path="res://assets/frames/blue_frame.png" id="2_baib5"]
+[ext_resource type="Script" path="res://UI/image_tile.gd" id="2_ycioo"]
+[ext_resource type="Texture2D" uid="uid://b3qh6xfbcfciq" path="res://assets/glitch/ambulance_SE.png" id="3_72wqq"]
+
+[node name="ImageTile" type="TextureButton"]
+offset_right = 84.0
+offset_bottom = 84.0
+pivot_offset = Vector2(42, 42)
+texture_normal = ExtResource("1_6qahc")
+script = ExtResource("2_ycioo")
+
+[node name="FrameImage" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_baib5")
+
+[node name="ItemImage" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_72wqq")
