@@ -15,6 +15,7 @@ func _ready() -> void:
 
 func quit_game_pressed() -> void:
 	SignalManager.on_game_exit_pressed.emit()
+	reset_level()
 
 func on_level_selected(level: int):
 	_level_selected = GameManager.get_selection_level(level)
@@ -30,5 +31,8 @@ func add_tile_image(image : Texture2D, tile_name: String) -> void:
 					image,
 					tile_name
 					)
+
 func reset_level() -> void:
-	pass
+	
+	for c in grid_container.get_children():
+		c.queue_free()
