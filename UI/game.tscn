@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgluajg1bp7fs"]
+[gd_scene load_steps=8 format=3 uid="uid://dgluajg1bp7fs"]
 
 [ext_resource type="Script" path="res://UI/game.gd" id="1_5emwy"]
 [ext_resource type="Texture2D" uid="uid://cgohxmcxpmsj5" path="res://assets/ui/blue_button00.png" id="1_g4cqi"]
 [ext_resource type="LabelSettings" uid="uid://efdir2vdny11" path="res://assets/GM_32_Dark.tres" id="1_v3dsm"]
 [ext_resource type="Texture2D" uid="uid://c42ikrmi3c6hi" path="res://assets/ui/green_button00.png" id="2_iitek"]
 [ext_resource type="LabelSettings" uid="uid://bb630qrhxr0ef" path="res://assets/GM_32_White.tres" id="3_mxama"]
+[ext_resource type="PackedScene" uid="uid://cjdghakplp1xe" path="res://Scorer/scorer.tscn" id="6_p3yy8"]
+[ext_resource type="PackedScene" uid="uid://dpo2xcdysfc6h" path="res://GameOverUI/game_over_ui.tscn" id="7_qetsb"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -14,6 +16,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5emwy")
+
+[node name="Scorer" parent="." instance=ExtResource("6_p3yy8")]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -100,3 +104,13 @@ text = "QUIT"
 label_settings = ExtResource("3_mxama")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="GameOverUI" parent="." instance=ExtResource("7_qetsb")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
