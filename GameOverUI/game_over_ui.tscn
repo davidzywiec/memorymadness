@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpo2xcdysfc6h"]
+[gd_scene load_steps=7 format=3 uid="uid://dpo2xcdysfc6h"]
 
+[ext_resource type="Script" path="res://GameOverUI/game_over_ui.gd" id="1_8ff51"]
 [ext_resource type="Texture2D" uid="uid://d2qgol3aqhlo5" path="res://assets/ui/UIbg.png" id="1_qyfy0"]
 [ext_resource type="LabelSettings" uid="uid://bb475bkqlpx44" path="res://assets/LG_84_Green.tres" id="2_as3a1"]
 [ext_resource type="LabelSettings" uid="uid://efdir2vdny11" path="res://assets/GM_32_Dark.tres" id="3_dgmbh"]
@@ -9,6 +10,7 @@
 [node name="GameOverUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_8ff51")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

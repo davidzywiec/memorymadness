@@ -4,7 +4,7 @@ extends Control
 @onready var grid_container : GridContainer = $HBoxContainer/MC/GC
 @onready var moves_label : Label = $HBoxContainer/MC2/VBC/HBCScore/MovesCount
 @onready var pairs_label : Label = $HBoxContainer/MC2/VBC/HBCPairs/PairsCount
-
+@onready var game_over_ui : Control = $GameOverUI
 #Instance for Image Tile
 var image_tile_prefab = preload("res://UI/image_tile.tscn")
 
@@ -24,6 +24,7 @@ func quit_game_pressed() -> void:
 	reset_level()
 
 func on_level_selected(level: int):
+	reset_level()
 	_level_selected = GameManager.get_selection_level(level)
 	grid_container.columns = _level_selected.get_num_cols()
 	
@@ -45,12 +46,14 @@ func reset_level() -> void:
 		c.queue_free()
 	_moves_made = 0
 	_pairs_found = 0
+	game_over_ui.visible = false
 	
 func game_over() -> void:
 	_pairs_found += 1
 	update_score_labels()
 	if _pairs_found == _level_selected._target_pairs:
-		print("Game over!")
+		game_over_ui.visible = true
+		game_over_ui.update_scores("%d/%d" % [_pairs_found,_level_selected.get_target_pairs()])
 
 func update_score_labels() -> void:
 	pairs_label.text = "%d/%d" % [_pairs_found,_level_selected.get_target_pairs()]
